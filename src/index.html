@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fractal Innovations | Web Tools & Server Hosting</title>
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    /></noscript>
+
+    <style>
+      .bg-gradient {
+        background: linear-gradient(135deg, #00984c 0%, #00a295 100%);
+      }
+      .text-gradient {
+        background: linear-gradient(90deg, #00ff99 0%, #00ffdd 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hover-translate {
+        transition: transform 0.3s ease;
+      }
+      .hover-translate:hover {
+        transform: translateY(-5px);
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav
+      class="bg-white shadow-md fixed w-full z-10 dark:bg-gray-800 dark:text-white"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 flex items-center">
+              <svg class="h-8 w-8" fill="#ffffff" viewBox="0 0 24 24">
+                <path d="M12 2L2 19h20L12 2zm0 4l6 10H6l6-10z"></path>
+              </svg>
+              <span
+                class="ml-2 font-bold text-xl text-teal-700 dark:text-teal-500"
+                >Fractal</span
+              >
+            </div>
+            <div class="hidden md:ml-6 md:flex md:space-x-8">
+              <a
+                href="#"
+                class="inline-flex items-center px-1 pt-1 border-b-2 border-teal-500 text-sm font-medium text-gray-900 dark:text-gray-100 dark:hover:text-gray-400"
+                >Home</a
+              >
+              <a
+                href="#products"
+                class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-100 dark:hover:text-gray-400"
+                >Products</a
+              >
+              <a
+                href="#services"
+                class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-100 dark:hover:text-gray-400"
+                >Services</a
+              >
+              <a
+                href="#about"
+                class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-100 dark:hover:text-gray-400"
+                >About</a
+              >
+            </div>
+          </div>
+          <div class="hidden md:flex items-center">
+            <a
+              href="https://github.com/fractal-innovations"
+              class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700"
+            >
+              <i class="fab fa-github mr-2"></i> GitHub
+            </a>
+            <a
+              href="#contact"
+              class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-teal-700 bg-teal-100 hover:bg-teal-200"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="md:hidden">
+        <div class="pt-2 pb-3 space-y-1">
+          <a
+            href="#"
+            class="block pl-3 pr-4 py-2 border-l-4 border-teal-500 text-base font-medium text-teal-700 bg-teal-50"
+            >Home</a
+          >
+          <a
+            href="#products"
+            class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
+            >Products</a
+          >
+          <a
+            href="#services"
+            class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
+            >Services</a
+          >
+          <a
+            href="#about"
+            class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
+            >About</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      style="min-height: 90vh"
+      class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient text-white"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:flex lg:items-center lg:justify-between">
+          <div class="lg:w-6/12">
+            <h1
+              class="text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl"
+            >
+              Powerful Web Tools
+              <span class="block text-teal-300">for Developers</span>
+            </h1>
+            <p class="mt-6 text-xl max-w-3xl">
+              Fractal Innovations provides cutting-edge developer tools,
+              software , and reliable server hosting solutions to power your
+              next big project.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4">
+              <a
+                href="#products"
+                class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-teal-700 bg-white hover:bg-gray-100"
+              >
+                Explore Our Tools
+              </a>
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center px-5 py-3 border border-teal-300 text-base font-medium rounded-md text-white hover:bg-teal-800 hover:bg-opacity-20"
+              >
+                Get Started
+              </a>
+            </div>
+          </div>
+          <div class="mt-10 lg:mt-0 lg:w-5/12">
+            <img
+              src="/public/dev-tools.png"
+              alt="Developer tools"
+              class="rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="hidden sm:block absolute bottom-10 left-0 right-0 text-white dark:text-slate-800"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="currentColor"
+            fill-opacity="1"
+            d="M0,128L48,144C96,160,192,192,288,197.3C384,203,480,181,576,181.3C672,181,768,203,864,218.7C960,235,1056,245,1152,234.7C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section id="products" class="py-16 bg-white pt-12 dark:bg-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2
+            class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-gray-200"
+          >
+            Developer-First Tools
+          </h2>
+          <p
+            class="mt-4 max-w-3xl mx-auto text-xl text-gray-500 dark:text-gray-400"
+          >
+            Our suite of professional developer tools designed to streamline
+            your workflow.
+          </p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Feature 1 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden hover-translate dark:bg-slate-700"
+          >
+            <div class="p-6">
+              <div
+                class="rounded-md bg-teal-50 p-3 inline-block dark:bg-slate-800"
+              >
+                <i
+                  class="fas fa-spider text-2xl text-teal-600 dark:text-teal-400"
+                ></i>
+              </div>
+              <h3
+                class="mt-4 text-xl font-medium text-gray-900 dark:text-gray-200"
+              >
+                Advanced Web Scrapers
+              </h3>
+              <p class="mt-2 text-base text-gray-500 dark:text-gray-300">
+                High-performance web scrapers with intelligent data extraction
+                capabilities for research and data collection.
+              </p>
+              <a
+                href="#"
+                class="mt-4 inline-flex items-center text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-500"
+              >
+                Learn more <i class="fas fa-arrow-right ml-1 text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden hover-translate dark:bg-slate-700"
+          >
+            <div class="p-6">
+              <div
+                class="rounded-md bg-teal-50 p-3 inline-block dark:bg-slate-800"
+              >
+                <i
+                  class="fas fa-code text-2xl text-teal-600 dark:text-teal-400"
+                ></i>
+              </div>
+              <h3
+                class="mt-4 text-xl font-medium text-gray-900 dark:text-gray-200"
+              >
+                Developer APIs
+              </h3>
+              <p class="mt-2 text-base text-gray-500 dark:text-gray-300">
+                Well-documented, reliable APIs that integrate seamlessly with
+                your existing development workflow.
+              </p>
+              <a
+                href="#"
+                class="mt-4 inline-flex items-center text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-500"
+              >
+                Learn more <i class="fas fa-arrow-right ml-1 text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden hover-translate dark:bg-slate-700"
+          >
+            <div class="p-6">
+              <div
+                class="rounded-md bg-teal-50 p-3 inline-block dark:bg-slate-800"
+              >
+                <i
+                  class="fas fa-server text-2xl text-teal-600 dark:text-teal-400"
+                ></i>
+              </div>
+              <h3
+                class="mt-4 text-xl font-medium text-gray-900 dark:text-gray-200"
+              >
+                Server Hosting
+              </h3>
+              <p class="mt-2 text-base text-gray-500 dark:text-gray-300">
+                Reliable and scalable server hosting solutions with 99.9% uptime
+                guarantee and 24/7 technical support.
+              </p>
+              <a
+                href="#"
+                class="mt-4 inline-flex items-center text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-500"
+              >
+                Learn more <i class="fas fa-arrow-right ml-1 text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section
+      id="services"
+      class="py-16 bg-gray-50 dark:bg-slate-700"
+      style="background-color: #180d5bff"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:flex lg:items-center lg:justify-between">
+          <div class="lg:w-1/2">
+            <h2
+              class="text-3xl font-extrabold text-gray-200 dark:text-gray-200 sm:text-4xl"
+            >
+              Enterprise Solutions
+            </h2>
+            <p class="mt-4 text-lg text-gray-300">
+              We provide custom solutions tailored to your business needs with
+              enterprise-grade security and reliability.
+            </p>
+            <div class="mt-8 space-y-6">
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <div
+                    class="flex items-center justify-center h-12 w-12 rounded-md bg-teal-600 dark:bg-teal-400 text-white"
+                  >
+                    <i class="fas fa-cloud"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-medium text-gray-200">
+                    Cloud Infrastructure
+                  </h3>
+                  <p class="mt-2 text-base text-gray-300">
+                    Secure and scalable cloud solutions that grow with your
+                    business.
+                  </p>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <div
+                    class="flex items-center justify-center h-12 w-12 rounded-md bg-teal-600 dark:bg-teal-400 text-white"
+                  >
+                    <i class="fas fa-shield-alt"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-medium text-gray-200">
+                    Security Focus
+                  </h3>
+                  <p class="mt-2 text-base text-gray-300">
+                    Enterprise-grade security measures to protect your critical
+                    data.
+                  </p>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <div
+                    class="flex items-center justify-center h-12 w-12 rounded-md bg-teal-600 dark:bg-teal-400 text-white"
+                  >
+                    <i class="fas fa-headset"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-medium text-gray-200">
+                    24/7 Support
+                  </h3>
+                  <p class="mt-2 text-base text-gray-300">
+                    Round-the-clock technical assistance from our expert team.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-10 lg:mt-0 lg:w-5/12">
+            <img
+              src="/public/datacenter.png"
+              alt="Enterprise solutions"
+              class="rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white dark:bg-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2
+            class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-gray-200"
+          >
+            Trusted by Developers Worldwide
+          </h2>
+          <p
+            class="mt-4 max-w-2xl mx-auto text-xl text-gray-500 dark:text-gray-400"
+          >
+            Here's what our clients have to say about our products and services.
+          </p>
+        </div>
+        <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Testimonial 1 -->
+          <div class="bg-gray-50 dark:bg-slate-700 rounded-lg p-6 shadow">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <i class="fas fa-quote-left text-2xl text-teal-500"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg font-bold dark:text-gray-200">
+                  TechCorp Inc.
+                </h4>
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="mt-4 text-gray-600 dark:text-gray-300">
+              "Fractal's scraping tools have revolutionized our data collection
+              process. We've reduced manual work by 80% while improving
+              accuracy."
+            </p>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-gray-50 dark:bg-slate-700 rounded-lg p-6 shadow">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <i class="fas fa-quote-left text-2xl text-teal-500"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg font-bold dark:text-gray-200">DevStudio</h4>
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+            <p class="mt-4 text-gray-600 dark:text-gray-300">
+              "Their server hosting service is unmatched in reliability. We've
+              experienced zero downtime in over a year of operation."
+            </p>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-gray-50 dark:bg-slate-700 rounded-lg p-6 shadow">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <i class="fas fa-quote-left text-2xl text-teal-500"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg font-bold dark:text-gray-200">
+                  DataFlow Systems
+                </h4>
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="mt-4 text-gray-600 dark:text-gray-300">
+              "The developer APIs are incredibly well-documented and easy to
+              integrate. They've cut our development time in half."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gradient text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:flex lg:items-center lg:justify-between">
+          <div class="lg:w-1/2">
+            <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+              About Fractal Innovations
+            </h2>
+            <p class="mt-4 text-lg">
+              Founded by a team of passionate developers, Fractal Innovations is
+              committed to creating tools that make developers' lives easier.
+              Our mission is to provide reliable, efficient, and innovative
+              solutions for the modern web.
+            </p>
+            <p class="mt-4 text-lg">
+              With years of experience in web development, data science, and
+              server infrastructure, our team understands the challenges
+              developers face and builds tools specifically designed to overcome
+              them.
+            </p>
+            <div class="mt-8">
+              <a
+                href="https://github.com/fractal-innovations"
+                class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-teal-700 bg-white hover:bg-gray-100"
+              >
+                <i class="fab fa-github mr-2"></i> View Our GitHub
+              </a>
+            </div>
+          </div>
+          <div class="mt-10 lg:mt-0 lg:w-5/12">
+            <div class="bg-white bg-opacity-10 p-8 rounded-lg">
+              <h3 class="text-2xl font-bold mb-4 text-gray-700">Our Values</h3>
+              <div class="space-y-4 text-gray-800">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <i class="fas fa-check-circle text-teal-300"></i>
+                  </div>
+                  <p class="ml-3 text-lg">
+                    <strong>Innovation:</strong> We're always exploring new
+                    technologies and approaches.
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <i class="fas fa-check-circle text-teal-300"></i>
+                  </div>
+                  <p class="ml-3 text-lg">
+                    <strong>Reliability:</strong> Our tools are built to be
+                    dependable even in critical applications.
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <i class="fas fa-check-circle text-teal-300"></i>
+                  </div>
+                  <p class="ml-3 text-lg">
+                    <strong>Security:</strong> We implement the highest security
+                    standards in all our products.
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <i class="fas fa-check-circle text-teal-300"></i>
+                  </div>
+                  <p class="ml-3 text-lg">
+                    <strong>Open Source:</strong> We believe in contributing to
+                    the developer community.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="col-span-1 md:col-span-2">
+            <div class="flex items-center">
+              <svg
+                class="h-8 w-8 text-teal-400"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 2L2 19h20L12 2zm0 4l6 10H6l6-10z"></path>
+              </svg>
+              <span class="ml-2 font-bold text-xl text-white">Fractal</span>
+            </div>
+            <p class="mt-4 text-gray-300">
+              Empowering developers with innovative tools and reliable
+              infrastructure for the modern web.
+            </p>
+            <div class="mt-6 flex space-x-6">
+              <a href="#" class="text-gray-400 hover:text-teal-400">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://github.com/fractal-innovations"
+                class="text-gray-400 hover:text-teal-400"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-teal-400">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3
+              class="text-sm font-semibold text-gray-400 uppercase tracking-wider"
+            >
+              Products
+            </h3>
+            <ul class="mt-4 space-y-4">
+              <li>
+                <a href="#" class="text-base text-gray-300 hover:text-white"
+                  >Web Scrapers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-300 hover:text-white"
+                  >Developer APIs</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-300 hover:text-white"
+                  >Server Hosting</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-300 hover:text-white"
+                  >Documentation</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              class="text-sm font-semibold text-gray-400 uppercase tracking-wider"
+            >
+              Company
+            </h3>
+            <ul class="mt-4 space-y-4">
+              <li>
+                <a
+                  href="#about"
+                  class="text-base text-gray-300 hover:text-white"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-300 hover:text-white"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-300 hover:text-white"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-base text-gray-300 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-12 border-t border-gray-700 pt-8">
+          <p class="text-base text-gray-400 text-center">
+            &copy; 2025 Fractal Innovations. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Simple mobile menu toggle logic
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenu = document.querySelector(".md\\:hidden");
+        const menuButton = document.createElement("button");
+        menuButton.innerHTML = '<i class="fas fa-bars"></i>';
+        menuButton.className =
+          "md:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white";
+        menuButton.style.position = "absolute";
+        menuButton.style.right = "1rem";
+        menuButton.style.top = "1rem";
+
+        const nav = document.querySelector("nav > div");
+        nav.appendChild(menuButton);
+
+        let isOpen = false;
+        mobileMenu.style.display = "none";
+
+        menuButton.addEventListener("click", function () {
+          isOpen = !isOpen;
+          mobileMenu.style.display = isOpen ? "block" : "none";
+          menuButton.innerHTML = isOpen
+            ? '<i class="fas fa-times"></i>'
+            : '<i class="fas fa-bars"></i>';
+        });
+      });
+    </script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </body>
+</html>
